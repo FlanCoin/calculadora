@@ -1,0 +1,242 @@
+/* === GLOBAL === */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #101010;
+  color: #e6e6e6;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+}
+
+.app {
+  width: 100%;
+  max-width: 960px;
+  padding: 3rem 2rem;
+  box-sizing: border-box;
+}
+
+/* === TITULARES === */
+h1 {
+  color: #00e676;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  text-shadow: 0 0 10px rgba(0, 230, 118, 0.3);
+}
+
+h2 {
+  color: #b2ff59;
+  font-size: 1.6rem;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #444;
+  padding-bottom: 0.5rem;
+}
+
+/* === FORMULARIO === */
+.input-group {
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: 0.95rem;
+  margin-bottom: 0.25rem;
+  color: #ccc;
+}
+
+input, select {
+  padding: 0.6rem 0.8rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: none;
+  background-color: #1e1e1e;
+  color: white;
+  outline: 1px solid #2e2e2e;
+  transition: 0.2s ease;
+}
+
+input:focus, select:focus {
+  outline: 2px solid #00e676;
+}
+
+/* === BOTÓN === */
+button {
+  padding: 0.8rem 1.2rem;
+  background-color: #00e676;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  color: #000;
+  margin-top: 1rem;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #00c853;
+}
+
+/* === RESULTADOS === */
+.resultados {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.resultado {
+  padding: 1rem;
+  border-radius: 6px;
+  background-color: #1e1e1e;
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  font-size: 0.95rem;
+}
+
+.resultado.probable {
+  border-left: 4px solid #00e676;
+}
+
+.resultado.improbable {
+  border-left: 4px solid #ff5252;
+}
+
+.fila {
+  display: flex;
+  justify-content: space-between;
+}
+
+.fila div {
+  min-width: 30%;
+}
+
+.error {
+  color: #ff5252;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+/* === CUOTAS REALES === */
+.cuotas {
+  margin-top: 2rem;
+}
+
+.partido {
+  background: #1b1b1b;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  border-left: 4px solid #00e676;
+  border-radius: 6px;
+  box-shadow: 0 0 6px rgba(0, 230, 118, 0.08);
+}
+
+.partido h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.1rem;
+  color: #f5f5f5;
+}
+
+.cuota-bloque {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.cuota-btn {
+  padding: 0.4rem 0.8rem;
+  background: #292929;
+  border: 1px solid #00e676;
+  border-radius: 4px;
+  color: #00e676;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: 0.3s ease;
+}
+
+.cuota-btn:hover {
+  background-color: #00e676;
+  color: #000;
+}
+
+/* === TABLA DE MERCADOS === */
+.tabla-mercados {
+  width: 100%;
+  margin-top: 1rem;
+  border-collapse: collapse;
+  background-color: #1e1e1e;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.05);
+}
+
+.tabla-mercados th,
+.tabla-mercados td {
+  padding: 0.8rem;
+  border-bottom: 1px solid #333;
+  text-align: left;
+}
+
+.tabla-mercados th {
+  background-color: #2e2e2e;
+  color: #00e676;
+  font-weight: 600;
+}
+
+.tabla-mercados tr:last-child td {
+  border-bottom: none;
+}
+/* === RESPONSIVE === */
+@media screen and (max-width: 768px) {
+  .app {
+    padding: 2rem 1rem;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  .fila {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .cuota-bloque {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .resultado {
+    font-size: 0.95rem;
+  }
+
+  .tabla-mercados th, .tabla-mercados td {
+    padding: 0.6rem 0.4rem;
+    font-size: 0.85rem;
+  }
+
+  .partido h3 {
+    font-size: 1rem;
+  }
+
+  .cuota-btn {
+    width: 100%;
+    font-size: 0.9rem;
+  }
+
+  .input-group input,
+  .input-group select {
+    font-size: 1rem;
+    width: 100%;
+  }
+
+  button {
+    width: 100%;
+    margin-top: 1rem;
+  }
+}
